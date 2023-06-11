@@ -1,0 +1,18 @@
+<h2>Google Maps in Angular</h2>
+<div >
+  <google-map height="500px"
+  width="1000px"
+  [center]="center"
+  [zoom]="zoom"
+  id="gMap"
+  >
+<map-marker #marker="mapMarker"
+    *ngFor="let markerPosition of markers;"
+    [position]="markerPosition"
+    (mapClick)="openMarkerWindow(marker)">
+</map-marker>
+<map-info-window>Marker Info Window</map-info-window>
+</google-map>
+</div>
+
+<button (click)="openPDF()">ok</button>
